@@ -5,13 +5,92 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+    <section class="section dashboard">
+        <div class="row">
+
+            <!-- Left side columns -->
+            <div class="col-lg-12">
+                <div class="row">
+
+                    <!-- Sales Card -->
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card sales-card">
+
+                          
+
+                            <div class="card-body">
+                                <h5 class="card-title">Projects</h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-layout-text-window-reverse"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6>{{ $projects->count() }}</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- End Sales Card -->
+
+
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card sales-card">
+
+                          
+
+                            <div class="card-body">
+                                <h5 class="card-title">Users</h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6>{{ $users->count() }}</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- End Sales Card -->
+
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card sales-card">
+
+                          
+
+                            <div class="card-body">
+                                <h5 class="card-title">Company</h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-bank"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6>{{ $companies->count() }}</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- End Sales Card -->
+
+
+
+
+
                 </div>
-            </div>
+            </div><!-- End Left side columns -->
+
+
         </div>
-    </div>
+    </section>
+
+
+
 </x-app-layout>
